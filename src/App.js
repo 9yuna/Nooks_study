@@ -1,20 +1,13 @@
 import React from "react";
 import "./styles.css";
-import useTabs from "./useTabs";
-
-const content = [
-  { tab: "Section 1", content: "I'm the content of the Section 1" },
-  { tab: "Section 2", content: "I'm the content of the Section 2" },
-];
+import useTitle from "./useTitle";
 
 const App = () => {
-  const { currentItem, changeItem } = useTabs(0, content);
+  const titleUpdater = useTitle("Loading...");
+  setTimeout(() => titleUpdater("Home"), 5000);
   return (
     <div className="App">
-      {content.map((section, index) => (
-        <button onClick={() => changeItem(index)}>{section.tab}</button>
-      ))}
-      {currentItem.content}
+      <div>Hi</div>
     </div>
   );
 };
