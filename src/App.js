@@ -1,13 +1,13 @@
 import React from "react";
 import "./styles.css";
-import usePreventLeave from "./usePreventLeave";
+import useBeforeLeave from "./useBeforeLeave";
 
 const App = () => {
-  const { enablePrevent, disablePrevent } = usePreventLeave();
+  const begForLife = () => console.log("Pls dont leave");
+  useBeforeLeave(begForLife);
   return (
     <div className="App">
-      <button onClick={enablePrevent}>Protect</button>
-      <button onClick={disablePrevent}>Unprotect</button>
+      <h1>hello</h1>
     </div>
   );
 };
