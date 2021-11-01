@@ -1,13 +1,14 @@
 import React from "react";
 import "./styles.css";
-import useBeforeLeave from "./useBeforeLeave";
+import useFadeIn from "./useFadeIn";
 
 const App = () => {
-  const begForLife = () => console.log("Pls dont leave");
-  useBeforeLeave(begForLife);
+  const fadeInH1 = useFadeIn(1, 2);
+  const fadeInP = useFadeIn(5, 4);
   return (
     <div className="App">
-      <h1>hello</h1>
+      <h1 {...fadeInH1}>hello</h1>
+      <p {...fadeInP}>Testing</p>
     </div>
   );
 };
